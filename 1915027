@@ -1,0 +1,968 @@
+1 Program to print budding engineers on screen
+#include<stdio.h>
+void main()
+{ puts(“Welcome to budding engineers”);
+}
+OUTPUT:
+Welcome to budding engineers
+
+2 Program to print address using puts
+#include<stdio.h>
+void main()
+{ puts(Guru Nanak Dev Engineering College,\nGill Road,\nLudhiana, Punjab");
+    
+}
+OUTPUT:
+Guru Nanak Dev Engineeeing College,
+Gill Road,
+Ludhiana,Punjab
+
+3 Program to find the sum of two numbers
+#include<stdio.h>
+int addnum(int a,int b);
+int main()
+{ int x=2;
+int y=3;
+int sum;
+sum=addnum(x,y);
+printf("sum is:%d",sum);
+};
+int addnum(int a,int b)
+{ return (a+b);
+}
+OUTPUT:
+sum is:5
+
+4 Program to covert celcius to fahrenheit
+#include<stdio.h>
+float main()
+{float c,f;
+ c=1;
+ f=(c*9/5)+32;
+ printf("temp. in fahrenheit:%f",f);
+ return 0;
+ }
+OUTPUT:
+temp. in fahrenheit:33.799999
+
+5 Program to find perimeter and area of a circle
+#include <stdio.h>
+float main()
+{ float radius,perimeter,area;
+float pi=22/7.0;
+printf("Enter the radius:");
+scanf("%f",&radius);
+perimeter=pi*2*radius;
+area=pi*radius*radius;
+printf("radius:%.1f\nperimeter:%.1f\narea:%.7f",radius,perimeter,area);}
+output
+Enter the radius:1
+radius:1.0
+perimeter:6.3
+area:3.1428571
+
+6 Program to swap a number
+#include<stdio.h> 
+int main()
+{ int a,b;
+printf("enter the numbers to swap:");
+scanf("%d%d",&a,&b);
+a=a+b;
+b=a-b;
+a=a-b;
+printf("the result is %d and %d",a,b);
+return 0;
+}
+output
+enter the numbers to swap:12
+34
+the result is 34 and 12
+
+7 Program to find factorial of a number
+#include<stdio.h>
+void main()
+{
+int i,fact=1,num; 
+printf("enter a number to find factorial :"); 
+scanf("%d",&num);
+for(i=1;i<=num;i++)
+fact=fact*i;
+printf("factorial of mumber is:%d\n",fact);
+
+}
+output
+enter a number to find factorial :5
+factorial of mumber is:120
+
+8 Program to find even and odd of a number
+#include<stdio.h>
+int evenodd(int r); 
+int main()
+{ int x,result;
+printf("if you want to check the numberr to be odd or even please Do write the number:");
+scanf("%d",&x);
+result=evenodd(x);
+return 0;
+};
+int evenodd(int r)
+{ if (r%2==0)
+printf("number is even\n");
+else
+printf("number is odd\n");
+return r;
+} 
+output
+if you want to check the numberr to be odd or even please Do write the number:40
+number is even
+
+9 Program to find reverse of a number
+#include<stdio.h>
+int main()
+{
+int a,n;
+int r=0;
+printf("enter the number to get its reverse:");
+scanf("%d",&n);
+while(n>=1)
+{ a=n%10;
+n=n/10;
+r=r*10+a;
+}
+printf("the reverse is:%d",r);
+return 0;
+}
+output
+enter the number to get its reverse:321
+the reverse is:123
+
+10 Program to find fizzbuzz
+#include<stdio.h>
+int main()
+{ int i; 
+    for (i=1; i<=100; i++) 
+    { 
+        
+        if (i%15 == 0)         
+            printf ("FizzBuzz\t");     
+        else
+        if ((i%3) == 0)     
+            printf("Fizz\t");                 
+        else 
+        if ((i%5) == 0)                        
+            printf("Buzz\t");                  
+        else           
+            printf("%d\t", i);                  
+  
+    } 
+  
+    return 0; 
+    }
+    
+output
+1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11
+Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz
+Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz
+31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41
+Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz
+52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61
+62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71
+Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz
+82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91
+92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz
+
+}
+
+11 Program to find days of week using switch case
+#include<stdio.h>
+void main()
+{ char ch;
+
+printf("Enter 'm' for monday,\nt for tuesday,\nw for wednesday ,\nh for thursday,\nf for friday,\n\
+s for saturday,\n\
+u for sunday:");
+                         
+scanf("%c",&ch); 
+
+switch(ch)
+{
+case'm':
+case'M':
+printf("monday\n");
+break;
+case't':
+case'T':
+printf("tuesday\n");
+break;
+case'w': 
+case'W':
+printf("wednesday\n");
+break;
+case'h':
+case'H':
+printf("thursday\n");
+break;
+case'f':
+case'F':
+printf("friday\n");
+break;
+case's':
+case'S':
+printf("saturday\n");
+break;
+case'u':
+case'U':
+printf("sunday\n");
+break;
+default:
+printf("wrong input\n");
+}
+}
+output
+Enter ‘m’ for monday,
+t for tuesday,
+w for wednesday ,
+h for thursday,
+f for friday,
+s for saturday,
+u for sunday:m
+monday
+
+12 Program to perform arithmetic operators using switch case
+#include<stdio.h>
+int main()
+{ int a,b,r;
+int n;
+printf("enter 1 for division,\n2 for multiplication,\n3 for addition,\n4 for subtraction \n");
+scanf("%d",&n);
+printf("enter the numbers:");
+scanf("%d %d",&a,&b);
+switch(n)
+{
+case 1:
+r=a/b;
+printf("after division answer is:%d\n",r);
+break;
+ case 2:
+r=a*b;
+printf("after multiplication answer is:%d\n",r);
+break;
+case 3:
+r=a+b;
+printf("after addition answer is:%d\n",r);
+break;
+case 4:
+r=a-b;
+printf("after subtraction answer is:%d\n",r);
+break;
+}
+return 0;
+}
+output
+enter 1 for division,
+2 for multiplication,
+3 for addition,
+4 for subtraction
+3
+enter the numbers:2
+6
+after addition answer is:8
+
+13 Program to find leap year
+#include<stdio.h>
+int main()
+{
+int x;
+printf("enter the year:");
+scanf("%d",&x);
+if (x%4==0)
+printf("Leap year");
+else
+printf("not a leap year");
+return 0;
+}
+output
+enter the year:2019
+not a leap year
+
+14Program to find that a number is prime or not
+#include <stdio.h>
+int main()
+{
+   int i, num, p = 0;
+   printf("Please enter a number: \n");
+   scanf("%d", &num);
+   for(i=1; i<=num; i++)
+   {
+      if(num%i==0)
+      {
+         p++;
+      }
+   }   }
+
+   if(p==2)
+   {
+      printf("Entered number is %d "\
+             "and it is a prime number.",num);
+   }
+   else
+   {
+      printf("Entered number is %d "\
+             "and it is not a prime number.",num);
+   }
+}
+
+output
+Please enter a number:
+12
+Entered number is 12 and it is not a prime number.
+
+15 Program to find a number is palindrome or not
+#include<stdio.h>
+int main()
+{
+int a,n,r=0,t;
+printf("enter the number:");
+scanf("%d",&n);
+t=n;
+while(n!=0)
+{ a=n%10;
+  r=r*10+a;
+  n=n/10;
+  
+  }
+if (r==t)
+printf("number is palindrome\n");
+else
+printf("number is not palindrome\n");
+return 0;
+}
+output
+enter the number:20502
+number is palindrome
+
+16 Program to check that a string is palindrome or not
+#include <stdio.h>
+#include <string.h>
+ 
+int main()
+{
+    char a[1000];
+    int i,n,c=0;
+ 
+    printf("Enter  the string : ");
+    scanf("%s",a);
+    n=strlen(a);
+ 
+    for(i=0;i<n/2;i++)  
+    {
+    	if(a[i]==a[n-i-1])
+    	c++;
+ 
+ 	}
+ 	if(c==i)
+ 	    printf("string is palindrome");
+    else
+        printf("string is not palindrome");
+ 
+ 	 
+     
+    return 0;
+}
+output
+Enter the string : madam
+string is palindrome
+
+17 Program to find fibonacci series
+#include <stdio.h>
+int main()
+{
+	int n,a=0,b=1,c=0,i;
+	printf("Enter ther limit of series ");
+	scanf("%d",&n);
+	printf("%d %d ",a,b);
+	for(i=2;i<n;i++)
+	{
+		c=a+b;
+		printf("%d ",c);
+		a=b;
+		b=c;
+	}
+	printf("\n");
+	return 0;
+}
+output
+Enter ther limit of series 6
+0 1 1 2 3 5
+
+18 Program to enter and print elements in one dimensional array
+#include<stdio.h>
+void enterarray(int a[],int b);
+void printarray(int a[],int b);
+int main()
+{
+int a[10];
+enterarray(a,10);
+printarray(a,10);
+return 0;
+};
+void enterarray(int a[],int b)
+{
+int i=0;
+printf("enter elements:\n");
+for(i=0;i<b;i++)
+{printf("enter a[%d]=",i);
+scanf("%d",&a[i]);}
+printf("\n");}
+void printarray(int a[],int b)
+{
+int i=0;
+printf("elements are:\n");
+for(i=0;i<b;i++)
+printf("a[%d]=%d\n",i,a[i]);
+}
+
+output
+enter elements:
+enter a[0]=1
+enter a[1]=
+enter a[2]=3
+enter a[3]=4
+enter a[4]=5
+enter a[5]=6
+enter a[6]=7
+enter a[7]=8
+enter a[8]=9
+enter a[9]=10
+
+elements are:
+a[0]=1
+a[1]=2
+a[2]=3
+a[3]=4
+a[4]=5
+a[5]=6
+a[6]=7
+a[7]=8
+a[8]=9
+a[9]=10
+
+19 Program to enter and print elements in a two dimensional array
+#include<stdio.h>
+int main()
+{
+	int a[3][3];
+	printf("Enter the value for 3*3 matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		scanf("%d",&a[i][j]);
+	}
+	printf("Matrix A\n");
+	for(int i=1;i<=3;i++) 
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",a[i][j]);
+		printf("\n");
+	}
+}
+output
+Enter the value for 3*3 matrix
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Matrix A
+1 2 3
+4 5 6
+7 8 9
+
+20 Program to add two matrices
+#include <stdio.h>
+int main()
+{
+int a[3][3],b[3][3],c[3][3];
+printf("Enter the value for first matrix\n");
+for(int i=1;i<=3;i++)
+{
+for(int j=1;j<=3;j++)
+scanf("%d",&a[i][j]);
+}
+printf("Enter the value for second matrix\n");
+for(int i=1;i<=3;i++)
+{
+for(int j=1;j<=3;j++)
+scanf("%d",&b[i][j]);
+}
+for(int i=1;i<=3;i++)
+{
+for(int j=1;j<=3;j++)
+c[i][j]=a[i][j]+b[i][j];
+}
+printf("First Matrix\n");
+for(int i=1;i<=3;i++)
+{
+for(int j=1;j<=3;j++)
+printf("%d\t",a[i][j]);
+printf("\n");
+}
+printf("Second Matrix\n");
+for(int i=1;i<=3;i++)
+{
+for(int j=1;j<=3;j++)
+printf("%d\t",b[i][j]);
+printf("\n");
+}
+printf("Result of Addition of Two Matrix\n");
+for(int i=1;i<=3;i++)
+{
+for(int j=1;j<=3;j++)
+printf("%d\t",c[i][j]);
+printf("\n");
+}
+}
+output
+Enter the value for first matrix
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Enter the value for second matrix
+11
+22
+33
+44
+5
+66
+7
+8
+90
+9
+First Matrix
+1 2 3
+4 5 6
+7 8 9
+Second Matrix
+11 22 33
+44 5 66
+7 8 90
+Result of Addition of Two Matrix
+12 24 36
+48 10 72
+14 16 99
+
+21 Program to subtract two matrices
+include <stdio.h>
+int main()
+{
+	int a[3][3],b[3][3],c[3][3];
+	printf("Enter the value for first matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		scanf("%d",&a[i][j]);
+	}
+	printf("Enter the value for second matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		scanf("%d",&b[i][j]);
+	}
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		c[i][j]=a[i][j]-b[i][j];
+	}
+	printf("First Matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",a[i][j]);
+		printf("\n");
+	}
+	printf("Second Matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",b[i][j]);
+		printf("\n");
+	}
+	printf("Result of Subtraction of Two Matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",c[i][j]);
+		printf("\n");
+	}
+}
+output
+enter the value for first matrix
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Enter the value for second matrix
+1
+2
+3
+4
+5
+6
+7
+8
+9
+First Matrix
+9 8 7
+6 5 4
+3 2 1
+Second Matrix
+1 2 3
+4 5 6
+7 8 9
+Result of Subtraction of Two Matrix
+8 6 4
+2 0 -2
+-4 -6 -8
+
+22 Program to find transpose of a matrix
+#include <stdio.h>
+int main()
+{
+	int a[3][3],b[3][3],c[3][3];
+	printf("Enter the value for matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		scanf("%d",&a[i][j]);
+	}
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		c[j][i]=a[i][j];
+	}
+	printf("Matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",a[i][j]);
+		printf("\n");
+	}
+	printf("Result of Transpose of Matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",c[i][j]);
+		printf("\n");
+	}
+}
+output
+Enter the value for matrix
+11
+22
+3
+4
+55
+66
+7
+8
+9
+Matrix
+11 22 3
+4 55 66
+7 8 9
+Result of Transpose of Matrix
+11 4 7
+22 55 8
+3 66 9
+
+23 Program to multiply matrices
+#include <stdio.h>
+int main()
+{
+	int a[3][3],b[3][3],c[3][3],sum;
+	printf("Enter the value for first matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		scanf("%d",&a[i][j]);
+	}
+	printf("Enter the value for second matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		scanf("%d",&b[i][j]);
+	}
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		{
+			sum=0;
+			for(int k=1;k<=3;k++)
+			sum=sum+a[i][k]*b[k][j];
+			c[i][j]=sum;
+		}
+	}
+	printf("First Matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",a[i][j]);
+		printf("\n");
+	}
+	printf("Second Matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",b[i][j]);
+		printf("\n");
+	}
+	printf("Result of Multiplication of Two Matrix\n");
+	for(int i=1;i<=3;i++)
+	{
+		for(int j=1;j<=3;j++)
+		printf("%d\t",c[i][j]);
+		printf("\n");
+	}
+}
+output
+after entering values answer is
+First Matrix
+1 1 1
+1 11 1
+1 1 11
+Second Matrix
+0 11 11
+0 1 1
+1 1 1
+Result of Multiplication of Two
+Matrix
+1 13 13
+1 23 23
+11 23 23
+
+24 Program to find square of a number using function
+#include<stdio.h>
+int square(int x);
+int main()
+{
+	int n,s;
+	printf("Enter the number: ");
+	scanf("%d",&n);
+	s=square(n);
+	printf("Square of %d= %d\n",n,s);
+}
+int square(int x)
+{
+	int s=x*x;
+	return s;
+}
+output
+Enter the number: 7
+Square of 7= 49
+
+25 Program to swap a number using call by value
+#include <stdio.h>
+void swap(int a, intb);
+int main()
+{
+	int x, y;
+	printf("Enter the value of x and y\n");
+	scanf("%d%d",&x,&y);
+	printf("Before Swapping\nx = %d\ny = %d\n", x, y);
+	swap(x, y); 
+	printf("After Swapping\nx = %d\ny = %d\n", x, y);
+	return 0;
+}
+void swap(int a, int b)
+{
+	int temp;
+	temp = b;
+	b = a;
+	a = temp;
+} 
+output
+enter the value of x and y
+33
+2
+Before Swapping
+x = 33
+y = 2
+After Swapping
+x = 33
+y = 2
+
+26 Program to swap numbers using call by reference
+#include <stdio.h>
+void swap(int * num1, int * num2);
+	int main()
+{
+	int num1, num2;
+	printf("Enter two numbers: ");
+	scanf("%d%d", &num1, &num2);
+	printf("Before swapping in main n");
+	printf("Value of num1 = %d \n", num1);
+	printf("Value of num2 = %d \n\n", num2);
+	swap(&num1, &num2);
+	printf("After swapping in main n");
+	printf("Value of num1 = %d \n", num1);
+	printf("Value of num2 = %d \n\n", num2);
+	return 0;
+}
+void swap(int * num1, int * num2)
+{
+	int temp;
+	temp = *num1;
+	*num1= *num2;
+	*num2= temp;
+} 
+output
+enter two numbers: 33
+22
+Before swapping in main nValue o
+f num1 = 33
+Value of num2 = 22
+
+After swapping in main nValue of
+num1 = 22
+Value of num2 = 33
+
+27 Program to find factorial using recursion
+#include <stdio.h>
+int factorial(int n);
+int main()
+{
+	int n;
+	printf("Enter the number: ");
+	scanf("%d", &n);
+	printf("Factorial of %d = %d\n", n,factorial(n));
+	return 0;
+}
+int factorial(int n)
+{
+	if (n>=1)
+	return n*factorial(n-1);
+	else
+	return 1;
+} 
+output
+enter the number: 5
+Factorial of 5 = 120
+
+28 Program to find fibonacci series using recursion
+#include<stdio.h>
+int Fibonacci(int);
+int main()
+{
+	int n,i=0;
+	printf("Enter the limit: ");
+	scanf("%d",&n);
+	printf("Fibonacci series\n");
+	for(int j=0;j<=n;j++)
+	{
+		printf("%d ",Fibonacci(i));
+		i++; 
+	}
+	printf("\n");
+	return 0;
+}
+int Fibonacci(int n)
+{
+	if(n==0)
+	return 0;
+	else if(n==1)
+	return 1;
+	else
+	return ( Fibonacci(n-1) + Fibonacci(n-2) );
+}  
+output
+enter the limit: 5
+Fibonacci series
+011235
+
+29 Program to show elements in structure
+#include<stdio.h>
+struct doctor
+{ char name[20];
+float age;
+int gender;
+char disease[20];
+};
+int main()
+{ struct doctor patient;
+ printf("enter the information:");
+ printf("name  :\n");
+scanf("%s",patient.name);
+printf("age:\n");
+scanf("%f",&patient.age);
+printf("gender:\n");
+scanf("%d",&patient.gender);
+printf("disease:\n");
+scanf(" %s",patient.disease);
+printf("A patient %s of age %.1f and gender %d has %s disease.\n",patient.name,\
+                       patient.age,patient.gender,patient.disease); 
+}
+
+output
+enter the information:name :
+abc
+age:
+12.1
+disease:
+asthma
+gender:
+1
+A patient abc of age 12.1 and gender 1 has asthma disease.
+
+30 Program of array of structures
+#include<stdio.h>
+struct student
+{
+    int rollno;
+    char name[20];
+};
+int main()
+{
+    int i;
+    struct student st[3];
+    printf("enter elements\n");
+    for(i=0;i<3;i++)
+    {
+        printf("rollno\n");
+        scanf("%d",&st[i].rollno);
+        printf("name\n");
+        scanf("%s",st[i].name);
+    }
+    for(i=0;i<3;i++)
+    printf("roll no. is %d of %s\n",st[i].rollno,st[i].name);
+}
+output
+enter elements
+rollno
+1
+name
+abc
+rollno
+2
+name
+pqr
+rollno
+3
+name
+xyz
+roll no. is 1 of abc
+roll no. is 2 of pqr
+roll no. is 3 of xyz
